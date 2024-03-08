@@ -160,9 +160,7 @@ def hijack_progress(server):
 
 
 def cleanup_temp():
-    temp_dir = folder_paths.get_temp_directory()
-    if os.path.exists(temp_dir):
-        shutil.rmtree(temp_dir, ignore_errors=True)
+    pass # [jordan] for now we treat the outputs from PreviewImage the same as SaveImage so we want to keep the temp dir (it's actually the same directory as the output + input dirs, so we can use outputs as inputs without re-uploading)
 
 
 def load_extra_path_config(yaml_path):
